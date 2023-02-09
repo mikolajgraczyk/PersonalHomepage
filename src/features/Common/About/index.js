@@ -1,11 +1,13 @@
 import photo from "./photo.jpg";
-import { Wrapper, Image, ContentSection, Introducer, Title, Content } from "./styled";
+import { Wrapper, Image, ImageSection, ContentSection, Introducer, Title, Content } from "./styled";
 
 
 const About = ({ HireMeButton }) => {
     return (
         <Wrapper>
-            <Image src={photo} />
+            <ImageSection>
+                <Image src={photo} alt="Author"/>
+            </ImageSection>
             <ContentSection>
                 <Introducer>THIS IS</Introducer>
                 <Title>Mikołaj Graczyk</Title>

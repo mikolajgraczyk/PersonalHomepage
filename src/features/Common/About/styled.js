@@ -9,6 +9,11 @@ export const Wrapper = styled.div`
     margin-top: 119px;
 `;
 
+export const ImageSection = styled.div`
+    width: 398px;
+    height: 398px;
+`;
+
 export const Image = styled.img`
     max-width: 384px;
     border-radius: 50%;
