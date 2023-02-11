@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.button`
     width: 154px;
     height: 49px;
-    background: ${({theme}) => theme.color.scienceBlue};
-    color: ${({theme}) => theme.color.white};
+    background: ${({ theme }) => theme.color.scienceBlue};
+    color: ${({ theme }) => theme.color.white};
     border: 1px solid rgba(209, 213, 218, 0.3);
     border-radius: 4px;
     display: flex;
@@ -14,6 +14,7 @@ export const Wrapper = styled.button`
     padding: 12px 16px;
     gap: 16px;
     margin-top: 32px;
+    transition: 0.5s;
 
     &:hover{
         box-shadow: 2px -2px 0px #8CC2FF, 
@@ -25,6 +26,14 @@ export const Wrapper = styled.button`
     &:active{
         box-shadow: inset 0px 2px 0px rgba(20, 70, 32, 0.2);
     }
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        background: ${({ theme }) => theme.color.dodgerBlue};
+
+        &:hover {
+        box-shadow: 2px -2px 0px #6D93BE, -2px 2px 0px #6D93BE, 2px 2px 0px #6D93BE, -2px -2px 0px #6D93BE;
+        }
+    `}
 `;
 
 export const ImageSection = styled.div`
@@ -33,7 +42,7 @@ export const ImageSection = styled.div`
 `;
 
 export const Content = styled.div`
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
     font-size: 20px;
     font-weight: 600;
 `;

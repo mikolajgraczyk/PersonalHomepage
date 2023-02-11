@@ -1,19 +1,29 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import listEclipse from "./listEclipse.png";
 
 export const Wrapper = styled.div`
     margin-top: 73px;
     padding: 32px;
-    color: ${({theme}) => theme.color.mineShaft};
-    background: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.mineShaft};
+    background: ${({ theme }) => theme.color.white};
     border-radius: 4px;
     box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
+    transition: 0.5s;
+    
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        background: ${({ theme }) => theme.color.lighterMineShaft};
+    `}
 `;
 
 export const Title = styled.div`
     font-weight: 900;
     font-size: 30px;
     letter-spacing: 0.05em;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        color: ${({ theme }) => theme.color.white};
+    `}
 `;
 
 export const List = styled.ol`
@@ -25,10 +35,15 @@ export const List = styled.ol`
     grid-column-gap: 140px;
     margin-top: 48px;
     margin-bottom: 0;
-    color: ${({theme}) => theme.color.slateGray};
+    color: ${({ theme }) => theme.color.slateGray};
     font-size: 18px;
     line-height: 140%;
     letter-spacing: 0.05em;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        color: ${({ theme }) => theme.color.white};
+    `}
 `;
 
 export const ListElement = styled.li`

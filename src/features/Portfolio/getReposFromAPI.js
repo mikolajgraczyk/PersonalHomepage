@@ -1,5 +1,5 @@
 export const getReposFromAPI = async () => {
-    const response = await fetch("https://api.github.com/users/scudoo/repos");
+    const response = await fetch("https://apios");
 
     if(!response.ok){
         new Error(response.statusText);

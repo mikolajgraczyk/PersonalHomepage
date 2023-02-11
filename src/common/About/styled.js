@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
     display: grid;
@@ -23,12 +23,17 @@ export const ContentSection = styled.div`
 `;
 
 export const Introducer = styled.div`
-    color: ${({theme}) => theme.color.slateGray};
+    color: ${({ theme }) => theme.color.slateGray};
     font-weight: 700;
     font-size: 12px;
     width: 43px;
     height: 16px;
     margin-top: 0px;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+    color: ${({theme}) => theme.color.white};
+    `}
 `;
 
 export const Title = styled.div`
@@ -38,14 +43,24 @@ export const Title = styled.div`
     font-weight: 900;
     font-size: 38px;  
     letter-spacing: 0.05em;
-    color: ${({theme}) => theme.color.mineShaft};
+    color: ${({ theme }) => theme.color.mineShaft};
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+    color: ${({theme}) => theme.color.white};
+    `}
 `;
 
 export const Content = styled.div`
     margin-top: 35px;
     font-weight: 400;
     font-size: 20px;
-    color: ${({theme}) => theme.color.slateGray};
+    color: ${({ theme }) => theme.color.slateGray};
     letter-spacing: 0.05em;
     line-height: 140%;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+    color: ${({theme}) => theme.color.white};
+    `}
 `;

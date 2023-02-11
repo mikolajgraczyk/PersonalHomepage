@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -11,6 +11,11 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'Inter', sans-serif; 
-        background: ${({theme}) => theme.color.whiteLilac};
+        background: ${({theme}) => theme.color.white};
+        transition: 0.5s;
+
+        ${({darkModeEnabled}) => darkModeEnabled && css`
+            background: ${({theme}) => theme.color.mineShaft};
+        `}
     }
 `;

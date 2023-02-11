@@ -1,14 +1,23 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+export const Wrapper = styled.div`
+    color: ${({ theme }) => theme.color.mineShaft};
+    margin: 95px auto 0;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        color: ${({ theme }) => theme.color.white};
+    `};
+`;
 
 export const ErrorIconSection = styled.div`
     max-width: 500px;
     text-align: center;
-    margin: 95px auto 0;
+    margin: 0 auto;
 `;
 
 export const ErrorMainText = styled.div`
     margin: 23px auto 0;
-    color: ${({ theme }) => theme.color.mineShaft};
     font-weight: 700;
     font-size: 24px;
     letter-spacing: 0.05em;
@@ -17,7 +26,6 @@ export const ErrorMainText = styled.div`
 
 export const ErrorDescription = styled.div`
     margin: 32px auto 0;
-    color: ${({ theme }) => theme.color.mineShaft};
     font-size: 20px;
     line-height: 140%;
     letter-spacing: 0.05em;
@@ -37,8 +45,13 @@ export const ErrorButton = styled.button`
     margin: 32px auto 0;
     width: 168px;
     height: 49px;
-    background: ${({theme}) => theme.color.scienceBlue};
+    background: ${({ theme }) => theme.color.scienceBlue};
     border: none;
     border-radius: 4px;
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        background: ${({ theme }) => theme.color.dodgerBlue};
+    `};
 `;

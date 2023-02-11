@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { ReactComponent as LoadingIcon } from "./LoadingIcon.svg";
 
 const rotate = keyframes`
@@ -13,11 +13,21 @@ export const LoadingText = styled.div`
     letter-spacing: 0.05em;
     text-align: center;
     margin: 88px auto 0;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        color: ${({ theme }) => theme.color.white};
+    `}
 `;
 
 export const StyledLoadingIcon = styled(LoadingIcon)`
     color: ${({ theme }) => theme.color.scienceBlue};
     animation: ${rotate} 1s linear infinite;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        color: ${({ theme }) => theme.color.dodgerBlue};
+    `}
 `;
 
 export const LoadingIconSection = styled.div`

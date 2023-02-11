@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
     display: grid;
@@ -13,10 +13,20 @@ export const Repo = styled.div`
     box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
     border-radius: 4px;
     border: 6px solid ${({ theme }) => theme.color.ironOpacity};
+    transition: 0.5s;
 
     &:hover{
-        border: 6px solid ${({ theme }) => theme.color.scienceBlueOpacity};
+        border: 6px solid ${({ theme }) => theme.color.scienceBlueOpacity20};
     }
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        background: ${({ theme }) => theme.color.lighterMineShaft};
+
+        &:hover{
+        border: 6px solid ${({ theme }) => theme.color.scienceBlueOpacity50};
+        }
+        
+    `}
 `;
 
 export const RepoName = styled.div`
@@ -24,6 +34,11 @@ export const RepoName = styled.div`
     font-weight: 700;
     font-size: 24px;
     letter-spacing: 0.05em;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        color: ${({ theme }) => theme.color.white};
+    `};
 `;
 
 export const RepoDescription = styled.div`
@@ -31,6 +46,11 @@ export const RepoDescription = styled.div`
     margin-top: 24px;
     font-size: 18px;
     line-height: 140%;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        color: ${({ theme }) => theme.color.white};
+    `};
 `;
 
 export const RepoAndDemo = styled.div`
@@ -42,10 +62,17 @@ export const RepoAndDemo = styled.div`
     grid-template-columns: auto auto;
     justify-content: left;
     grid-gap: 8px;
+    transition: 0.5s;
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        color: ${({ theme }) => theme.color.white};
+    `};
 `;
 
 export const DemoURL = styled.a`
     border-bottom: 1px ${({ theme }) => theme.color.scienceBlueOpacity} solid; 
+    transition: 0.5s;
+
     &:link{
         color: ${({ theme }) => theme.color.scienceBlue};
         text-decoration: none;
@@ -54,10 +81,24 @@ export const DemoURL = styled.a`
     &:visited{
         color: ${({ theme }) => theme.color.scienceBlue};
     }
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        border-bottom: 1px ${({ theme }) => theme.color.dodgerBlueOpacity} solid;
+
+        &:link{
+            color: ${({ theme }) => theme.color.dodgerBlue};
+            text-decoration: none;
+        }
+        
+        &:visited{
+            color: ${({ theme }) => theme.color.dodgerBlue};
+        }
+    `};
 `;
 
 export const CodeURL = styled.a`
     border-bottom: 1px ${({ theme }) => theme.color.scienceBlueOpacity} solid;
+    transition: 0.5s;
 
     &:link{
         color: ${({ theme }) => theme.color.scienceBlue};
@@ -67,4 +108,17 @@ export const CodeURL = styled.a`
     &:visited{
         color: ${({ theme }) => theme.color.scienceBlue};
     }
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        border-bottom: 1px ${({ theme }) => theme.color.dodgerBlueOpacity} solid;
+
+        &:link{
+            color: ${({ theme }) => theme.color.dodgerBlue};
+            text-decoration: none;
+        }
+
+        &:visited{
+            color: ${({ theme }) => theme.color.dodgerBlue};
+        }
+    `};
 `;
