@@ -8,6 +8,7 @@ import Header from "./features/Portfolio/Header";
 import Repos from "./features/Portfolio/Repos";
 import LoadingScreen from "./features/Portfolio/LoadingScreen";
 import ErrorScreen from "./features/Portfolio/ErrorScreen";
+import Contact from "./common/Contact";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         LoadingScreen={<LoadingScreen />}
         ErrorScreen={<ErrorScreen />}
       />
+      <Contact />
     </AppContainer>
   );
 }
