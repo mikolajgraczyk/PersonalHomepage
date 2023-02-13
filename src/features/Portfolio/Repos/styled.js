@@ -5,6 +5,11 @@ export const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-gap: 32px;
     margin-top: 24px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        grid-template-columns: auto;
+        grid-gap: 16px;
+    }
 `;
 
 export const Repo = styled.div`
@@ -27,6 +32,10 @@ export const Repo = styled.div`
         }
         
     `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        padding: 24px;
+    }
 `;
 
 export const RepoName = styled.div`
@@ -39,6 +48,10 @@ export const RepoName = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
     `};
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 16px;
+    }
 `;
 
 export const RepoDescription = styled.div`
@@ -51,6 +64,12 @@ export const RepoDescription = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
     `};
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 16px;
+    }
 `;
 
 export const RepoAndDemo = styled.div`
@@ -67,6 +86,11 @@ export const RepoAndDemo = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
     `};
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 14px;
+        margin-top: 16px;
+    }
 `;
 
 export const DemoURL = styled.a`

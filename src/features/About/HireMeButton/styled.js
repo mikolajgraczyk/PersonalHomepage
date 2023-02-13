@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Wrapper = styled.button`
+export const Button = styled.button`
     width: 154px;
     height: 49px;
     background: ${({ theme }) => theme.color.scienceBlue};
@@ -21,6 +21,7 @@ export const Wrapper = styled.button`
         -2px 2px 0px #8CC2FF, 
         2px 2px 0px #8CC2FF, 
         -2px -2px 0px #8CC2FF;
+        cursor: pointer;
     }
 
     &:active{
@@ -34,15 +35,37 @@ export const Wrapper = styled.button`
         box-shadow: 2px -2px 0px #6D93BE, -2px 2px 0px #6D93BE, 2px 2px 0px #6D93BE, -2px -2px 0px #6D93BE;
         }
     `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        gap: 12px;
+        width: 138px;
+        height: 46px;
+        margin-top: 24px;
+    }
 `;
 
 export const ImageSection = styled.div`
     width: 24px;
     height: 24px;
+    display: flex;
+    align-items: center;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        width: 20px;
+        height: 20px;
+    }
 `;
 
 export const Content = styled.div`
     color: ${({ theme }) => theme.color.white};
     font-size: 20px;
     font-weight: 600;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 18px;
+    }
+`;
+
+export const Link = styled.a`
+    text-decoration: none;
 `;

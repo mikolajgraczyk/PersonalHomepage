@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
     `};
+    
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        margin-top: 50px;
+    }
 `;
 
 export const ErrorIconSection = styled.div`
@@ -22,6 +26,11 @@ export const ErrorMainText = styled.div`
     font-size: 24px;
     letter-spacing: 0.05em;
     max-width: 420px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 20px;
+        text-align: center;
+    }
 `;
 
 export const ErrorDescription = styled.div`
@@ -31,6 +40,10 @@ export const ErrorDescription = styled.div`
     letter-spacing: 0.05em;
     max-width: 427px;
     text-align: center;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 16px;
+    }
 `;
 
 export const ErrorButton = styled.button`
@@ -54,4 +67,16 @@ export const ErrorButton = styled.button`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         background: ${({ theme }) => theme.color.dodgerBlue};
     `};
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        gap: 12px;
+        width: 138px;
+        height: 46px;
+        margin-top: 24px;
+        font-size: 15px;
+    }
+`;
+
+export const Link = styled.a`
+    text-decoration: none;
 `;

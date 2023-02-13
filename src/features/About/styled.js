@@ -7,16 +7,25 @@ export const Wrapper = styled.div`
     grid-gap: 66px;
     align-items: center;
     margin-top: 119px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        grid-template-columns: auto;
+        margin-left: 2px;
+        grid-gap: 12px;
+        margin-top: 32px;
+    }
 `;
 
 export const ImageSection = styled.div`
-    width: 398px;
-    height: 398px;
 `;
 
 export const Image = styled.img`
     max-width: 384px;
     border-radius: 50%;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        max-width: 132px;
+    }
 `;
 
 export const ContentSection = styled.div`
@@ -38,8 +47,6 @@ export const Introducer = styled.div`
 
 export const Title = styled.div`
     margin-top: 12px;
-    width: 415px;
-    height: 46px;
     font-weight: 900;
     font-size: 38px;  
     letter-spacing: 0.05em;
@@ -49,6 +56,10 @@ export const Title = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
     color: ${({theme}) => theme.color.white};
     `}
+    
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 22px;
+    }
 `;
 
 export const Content = styled.div`
@@ -63,4 +74,9 @@ export const Content = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
     color: ${({theme}) => theme.color.white};
     `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 17px;
+        margin-top: 16px;
+    }
 `;

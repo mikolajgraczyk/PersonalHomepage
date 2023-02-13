@@ -5,6 +5,11 @@ export const Wrapper = styled.div`
     gap: 12px;
     float: right;
     align-items: center;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        margin-top: 7px;
+        margin-right: 3px;
+    }
 `;
 
 export const ToggleText = styled.div`
@@ -15,6 +20,10 @@ export const ToggleText = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
     `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        display: none;
+    }
 `;
 
 export const Button = styled.button`

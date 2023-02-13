@@ -19,6 +19,10 @@ export const StyledGitHubLogo = styled(GitHubLogo)`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.dodgerBlue};
     `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        width: 32px;
+    }
 `;
 
 export const Title = styled.div`
@@ -26,6 +30,10 @@ export const Title = styled.div`
     font-size: 30px;
     letter-spacing: 0.05em;
     margin-top: 13px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 18px;
+    }
 `;
 
 export const SubTitle = styled.div`
@@ -33,4 +41,9 @@ export const SubTitle = styled.div`
     font-size: 20px;
     letter-spacing: 0.05em;
     margin-top: 8px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 17px;
+        margin-top: 16px;
+    }
 `;

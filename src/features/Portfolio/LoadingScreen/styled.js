@@ -18,6 +18,11 @@ export const LoadingText = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
     `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 17px;
+        margin-top: 60px;
+    }
 `;
 
 export const StyledLoadingIcon = styled(LoadingIcon)`

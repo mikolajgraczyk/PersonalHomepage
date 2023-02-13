@@ -18,6 +18,7 @@ export const theme = {
         alto: "#DADADA",
     },
     breakpoint: {
-
+        mobileInit: 1210,
+        mobileMax: 1060,
     },
 };

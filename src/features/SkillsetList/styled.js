@@ -13,6 +13,11 @@ export const Wrapper = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         background: ${({ theme }) => theme.color.lighterMineShaft};
     `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        padding: 16px;
+        margin-top: 50px;
+    }  
 `;
 
 export const Title = styled.div`
@@ -24,15 +29,18 @@ export const Title = styled.div`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
     `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        font-size: 18px;
+    }
 `;
 
 export const List = styled.ol`
     list-style-image: url(${listEclipse});
     display: grid;
     grid-template-columns: repeat(3, auto);
-    max-height: 256px;
     gap: 8px;
-    grid-column-gap: 140px;
+    grid-column-gap: 130px;
     margin-top: 48px;
     margin-bottom: 0;
     color: ${({ theme }) => theme.color.slateGray};
@@ -44,6 +52,16 @@ export const List = styled.ol`
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
     `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileInit}px){
+        grid-column-gap: 10px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        grid-template-columns: auto;
+        font-size: 14px;
+        line-height: 17px;
+    }
 `;
 
 export const ListElement = styled.li`

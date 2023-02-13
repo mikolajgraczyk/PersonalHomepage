@@ -1,4 +1,4 @@
-import { ErrorIconSection, ErrorMainText, ErrorDescription, ErrorButton, Wrapper } from "./styled";
+import { ErrorIconSection, ErrorMainText, ErrorDescription, ErrorButton, Wrapper, Link } from "./styled";
 import { ReactComponent as ErrorIcon } from "./ErrorIcon.svg";
 import { useDarkTheme } from "../../../useDarkTheme";
 
@@ -15,7 +15,9 @@ const ErrorScreen = () => {
                 Sorry, failed to load Github projects.
                 You can check them directly on Github.
             </ErrorDescription>
-            <ErrorButton darkModeEnabled={theme}>Go to Github</ErrorButton>
+            <Link href="https://github.com/scudoo" target="_blank">
+                <ErrorButton darkModeEnabled={theme}>Go to Github</ErrorButton>
+            </Link>
         </Wrapper>
     );
 };
