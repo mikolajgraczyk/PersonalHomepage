@@ -41,7 +41,7 @@ export const Introducer = styled.div`
     transition: 0.5s;
 
     ${({ darkModeEnabled }) => darkModeEnabled && css`
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
     `}
 `;
 
@@ -54,7 +54,7 @@ export const Title = styled.div`
     transition: 0.5s;
 
     ${({ darkModeEnabled }) => darkModeEnabled && css`
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
     `}
     
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
@@ -72,7 +72,7 @@ export const Content = styled.div`
     transition: 0.5s;
 
     ${({ darkModeEnabled }) => darkModeEnabled && css`
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
     `}
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){

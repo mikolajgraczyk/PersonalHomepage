@@ -25,13 +25,17 @@ export const Title = styled.div`
     font-size: 30px;
     letter-spacing: 0.05em;
     transition: 0.5s;
+    padding-bottom: 15px;
+    border-bottom: 1px ${({ theme }) => theme.color.ironOpacity30} solid;
 
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
+        border-bottom: 1px ${({ theme }) => theme.color.ironOpacity10} solid;
     `}
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
         font-size: 18px;
+        padding-bottom: 12px;
     }
 `;
 
@@ -41,7 +45,7 @@ export const List = styled.ol`
     grid-template-columns: repeat(3, auto);
     gap: 8px;
     grid-column-gap: 130px;
-    margin-top: 48px;
+    margin-top: 32px;
     margin-bottom: 0;
     color: ${({ theme }) => theme.color.slateGray};
     font-size: 18px;
@@ -61,6 +65,7 @@ export const List = styled.ol`
         grid-template-columns: auto;
         font-size: 14px;
         line-height: 17px;
+        margin-top: 12px;
     }
 `;
 
