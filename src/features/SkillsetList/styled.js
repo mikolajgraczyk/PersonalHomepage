@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import listEclipse from "./listEclipse.png";
+import ListEllipse from "./ListEllipse.png";
 
 export const Wrapper = styled.div`
     margin-top: 73px;
@@ -40,7 +40,7 @@ export const Title = styled.div`
 `;
 
 export const List = styled.ol`
-    list-style-image: url(${listEclipse});
+    list-style-image: url(${ListEllipse});
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 8px;

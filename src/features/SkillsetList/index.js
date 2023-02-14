@@ -3,7 +3,7 @@ import { useDarkTheme } from "../../useDarkTheme";
 
 const SkillsetList = ({ title, skills }) => {
     const theme = useDarkTheme();
-    
+
     return (
         <Wrapper darkModeEnabled={theme}>
             <Title darkModeEnabled={theme}>{title}</Title>

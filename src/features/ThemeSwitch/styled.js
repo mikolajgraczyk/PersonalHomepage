@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
     gap: 12px;
     float: right;
     align-items: center;
+    margin-top: 119px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
         margin-top: 7px;

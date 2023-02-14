@@ -6,7 +6,6 @@ const HireMeButton = () => {
     const theme = useDarkTheme();
 
     return (
-        <>
             <Link href="mailto: mikolajgraczyk123@gmail.com">
                 <Button darkModeEnabled={theme}>
                     <ImageSection>
@@ -15,7 +14,6 @@ const HireMeButton = () => {
                     <Content>Hire Me</Content>
                 </Button>
             </Link>
-        </>
     );
 };
 

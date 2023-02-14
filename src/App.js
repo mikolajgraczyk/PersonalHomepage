@@ -1,7 +1,6 @@
-import { AppContainer } from "./common/AppContainer/styled";
+import { AppContainer } from "./AppContainer/styled";
 import { currentSkillset, wantToLearn } from "./features/SkillsetList/skills";
 import About from "./features/About";
-import HireMeButton from "./features/About/HireMeButton";
 import SkillsetList from "./features/SkillsetList";
 import Portfolio from "./features/Portfolio";
 import Header from "./features/Portfolio/Header";
@@ -21,7 +20,7 @@ function App() {
       <GlobalStyle darkModeEnabled={theme} />
       <AppContainer>
         <ThemeSwitch />
-        <About HireMeButton={<HireMeButton />} />
+        <About />
         <SkillsetList
           title="My skillset includes"
           skills={currentSkillset}

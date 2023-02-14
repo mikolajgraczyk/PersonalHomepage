@@ -1,8 +1,9 @@
 import photo from "./photo.jpg";
 import { Wrapper, Image, ImageSection, ContentSection, Introducer, Title, Content } from "./styled";
 import { useDarkTheme } from "../../useDarkTheme";
+import HireMeButton from "./HireMeButton";
 
-const About = ({ HireMeButton }) => {
+const About = () => {
     const theme = useDarkTheme();
 
     return (
@@ -13,8 +14,8 @@ const About = ({ HireMeButton }) => {
             <ContentSection>
                 <Introducer darkModeEnabled={theme}>THIS IS</Introducer>
                 <Title darkModeEnabled={theme}>Mikołaj Graczyk</Title>
-                <Content darkModeEnabled={theme}>👨💻I'm a passionate Frontend Developer in love with React, currently looking for new job opportunities. </Content>
-                {HireMeButton}
+                <Content darkModeEnabled={theme}>👨💻 I'm a passionate Frontend Developer in love with React, currently looking for new job opportunities. </Content>
+                <HireMeButton />
             </ContentSection>
         </Wrapper>
     );
