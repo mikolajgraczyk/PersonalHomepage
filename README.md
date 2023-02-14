@@ -1,5 +1,4 @@
 # Personal Homepage
-<<<<<<< HEAD
 
 ## Description
 This webpage was created to inform about my programming skillset, things I want to learn in future. It also contains contact information.
@@ -18,9 +17,6 @@ This webpage was created to inform about my programming skillset, things I want 
 - CSS
 - Fetch
 
-=======
-This webpage was created to inform about my programming skillset, things I want to learn in future. It also contains contact information.
->>>>>>> 1cd8dc20b79e98cf25eb6eae284dba242d1cc637
 
 ### `npm start`
 
