@@ -11,6 +11,7 @@ export const currentSkillset =
         <ListElement>CSS Grid</ListElement>
         <ListElement>CSS Flexbox</ListElement>
         <ListElement>Redux (Toolkit)</ListElement>
+        <ListElement>Redux Saga</ListElement>
         <ListElement>React Hooks</ListElement>
         <ListElement>Error HandListElementng</ListElement>
         <ListElement>Working with API (fetch, axios)</ListElement>
