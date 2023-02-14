@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/PersonalHomepage/static/js/main.f58e557f.js",
+    "static/js/787.162bc9a0.chunk.js": "/PersonalHomepage/static/js/787.162bc9a0.chunk.js",
+    "static/media/photo.jpg": "/PersonalHomepage/static/media/photo.9c3d765f0565a0d002de.jpg",
+    "static/media/ThemeIcon.svg": "/PersonalHomepage/static/media/ThemeIcon.873cf05d51f90af830846cebd56bd380.svg",
+    "static/media/GitHubLogo.svg": "/PersonalHomepage/static/media/GitHubLogo.d3cb008b02ca370beb1bd46a8959706e.svg",
+    "index.html": "/PersonalHomepage/index.html",
+    "static/media/ErrorIcon.svg": "/PersonalHomepage/static/media/ErrorIcon.457bab9844e49da22fdd30aaa1c6f510.svg",
+    "static/media/LinkedInLogo.svg": "/PersonalHomepage/static/media/LinkedInLogo.9f38a04c76c9595b2da81e0828807b47.svg",
+    "static/media/Message.svg": "/PersonalHomepage/static/media/Message.989ae1682343e29abc4cecce8d3d543d.svg",
+    "static/media/LoadingIcon.svg": "/PersonalHomepage/static/media/LoadingIcon.120dff0a86733d924e2d24bb0ab338f7.svg",
+    "main.f58e557f.js.map": "/PersonalHomepage/static/js/main.f58e557f.js.map",
+    "787.162bc9a0.chunk.js.map": "/PersonalHomepage/static/js/787.162bc9a0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f58e557f.js"
+  ]
+}
