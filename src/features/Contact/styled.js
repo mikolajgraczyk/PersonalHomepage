@@ -96,21 +96,19 @@ export const StyledLinkedInLogo = styled(LinkedInLogo)`
 `;
 
 export const Link = styled.a`
-    &:visited{
-        color: inherit;
-    }
-    
-    &:hover{
-        cursor: pointer;
-    }
+    color: ${({ theme }) => theme.color.mineShaft};
+    transition: 0.5s;
 
-    &:focus{
-        color: ${({theme}) => theme.color.scienceBlue};
+    &:hover{
+        color: ${({ theme }) => theme.color.scienceBlue};
     }
 
     ${({ darkModeEnabled }) => darkModeEnabled && css`
-        &:focus{
+        color: ${({ theme }) => theme.color.alto};
+
+        &:hover{
             color: ${({ theme }) => theme.color.dodgerBlue};
-        }
+    }
+
     `}
 `;
