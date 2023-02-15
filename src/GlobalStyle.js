@@ -11,11 +11,11 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'Inter', sans-serif; 
-        background: ${({theme}) => theme.color.whiteLilac};
+        background: ${({ theme }) => theme.color.whiteLilac};
         transition: 0.5s;
 
-        ${({darkModeEnabled}) => darkModeEnabled && css`
-            background: ${({theme}) => theme.color.mineShaft};
+        ${({ darkModeEnabled }) => darkModeEnabled && css`
+            background: ${({ theme }) => theme.color.mineShaft};
         `}
     }
 `;
