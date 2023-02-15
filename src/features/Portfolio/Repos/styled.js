@@ -82,6 +82,7 @@ export const RepoAndDemo = styled.div`
     justify-content: left;
     grid-gap: 8px;
     transition: 0.5s;
+    height: 100px;
 
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
@@ -93,56 +94,22 @@ export const RepoAndDemo = styled.div`
     }
 `;
 
-export const DemoURL = styled.a`
-    border-bottom: 1px ${({ theme }) => theme.color.scienceBlueOpacity} solid; 
+export const URL = styled.a`
+    color: ${({ theme }) => theme.color.scienceBlue};
+    border-bottom: 1px solid ${({ theme }) => theme.color.scienceBlueOpacity20};
+    text-decoration: none;
     transition: 0.5s;
 
-    &:link{
-        color: ${({ theme }) => theme.color.scienceBlue};
-        text-decoration: none;
-    }
-    
-    &:visited{
-        color: ${({ theme }) => theme.color.scienceBlue};
+    &:hover{
+        border-bottom: 1px solid ${({ theme }) => theme.color.scienceBlueOpacity80};
     }
 
-    ${({ darkModeEnabled }) => darkModeEnabled && css`
-        border-bottom: 1px ${({ theme }) => theme.color.dodgerBlueOpacity} solid;
+    ${({darkModeEnabled}) => darkModeEnabled && css`
+        color: ${({ theme }) => theme.color.dodgerBlue};
+        border-bottom: 1px solid ${({ theme }) => theme.color.dodgerBlueOpacity40};
 
-        &:link{
-            color: ${({ theme }) => theme.color.dodgerBlue};
-            text-decoration: none;
-        }
-        
-        &:visited{
-            color: ${({ theme }) => theme.color.dodgerBlue};
-        }
-    `};
-`;
-
-export const CodeURL = styled.a`
-    border-bottom: 1px ${({ theme }) => theme.color.scienceBlueOpacity} solid;
-    transition: 0.5s;
-
-    &:link{
-        color: ${({ theme }) => theme.color.scienceBlue};
-        text-decoration: none;
+        &:hover{
+        border-bottom: 1px solid ${({ theme }) => theme.color.dodgerBlueOpacity80};
     }
-
-    &:visited{
-        color: ${({ theme }) => theme.color.scienceBlue};
-    }
-
-    ${({ darkModeEnabled }) => darkModeEnabled && css`
-        border-bottom: 1px ${({ theme }) => theme.color.dodgerBlueOpacity} solid;
-
-        &:link{
-            color: ${({ theme }) => theme.color.dodgerBlue};
-            text-decoration: none;
-        }
-
-        &:visited{
-            color: ${({ theme }) => theme.color.dodgerBlue};
-        }
-    `};
+    `}
 `;

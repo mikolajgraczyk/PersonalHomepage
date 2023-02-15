@@ -1,4 +1,4 @@
-import { Wrapper, Repo, RepoName, RepoDescription, RepoAndDemo, DemoURL, CodeURL } from "./styled";
+import { Wrapper, Repo, RepoName, RepoDescription, RepoAndDemo, URL } from "./styled";
 import { useSelector } from "react-redux";
 import { selectRepos } from "../portfolioSlice";
 import { useDarkTheme } from "../../../useDarkTheme";
@@ -14,25 +14,32 @@ const Repos = () => {
           <RepoName darkModeEnabled={theme}>{repo.name}</RepoName>
           <RepoDescription darkModeEnabled={theme}>{repo.description}</RepoDescription>
           <RepoAndDemo darkModeEnabled={theme}>
-            Demo: <DemoURL
-              href={repo.homepage}
-              target="_blank"
-              rel="noreferrer"
-              darkModeEnabled={theme}
-            >
-              https://link.demo.com
-            </DemoURL>
-            Code: <CodeURL
-              href={repo.svn_url}
-              target="_blank"
-              rel="noreferrer"
-              darkModeEnabled={theme}
-            >
-              https://link.code.com
-            </CodeURL>
+            Demo:
+            <span>
+              <URL
+                href={repo.homepage}
+                target="_blank"
+                rel="noreferrer"
+                darkModeEnabled={theme}
+              >
+                {repo.homepage}
+              </URL>
+            </span>
+            Code:
+            <span>
+               <URL
+                href={repo.svn_url}
+                target="_blank"
+                rel="noreferrer"
+                darkModeEnabled={theme}
+              >
+                {repo.svn_url}
+              </URL>
+            </span>
           </RepoAndDemo>
-        </Repo>)}
-    </Wrapper>
+        </Repo>)
+      }
+    </Wrapper >
   );
 };
 
