@@ -2,7 +2,7 @@
   "name": "personal-homepage",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://scudoo.github.io/PersonalHomepage/",
+  "homepage": "https://mikolajgraczyk.github.io/PersonalHomepage/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^5.16.5",
