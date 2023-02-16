@@ -14,7 +14,7 @@ import { GlobalStyle } from './GlobalStyle';
 
 function App() {
   const theme = useDarkTheme();
-  
+
   return (
     <>
       <GlobalStyle darkModeEnabled={theme} />

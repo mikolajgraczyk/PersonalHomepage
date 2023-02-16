@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import ListEllipse from "./ListEllipse.png";
+import { ReactComponent as ListEllipse } from "./ListEllipse.svg"
 
 export const Wrapper = styled.div`
     margin-top: 73px;
@@ -39,14 +39,23 @@ export const Title = styled.div`
     }
 `;
 
-export const List = styled.ol`
-    list-style-image: url(${ListEllipse});
+export const StyledListEllipse = styled(ListEllipse)`
+    color: ${({theme}) => theme.color.scienceBlue};
+
+    ${({ darkModeEnabled }) => darkModeEnabled && css`
+        color: ${({theme}) => theme.color.dodgerBlue};
+    `}
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        width: 6px;
+    }
+`;
+
+export const List = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 8px;
-    grid-column-gap: 130px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
     margin-top: 32px;
-    margin-bottom: 0;
     color: ${({ theme }) => theme.color.slateGray};
     font-size: 18px;
     line-height: 140%;
@@ -69,7 +78,14 @@ export const List = styled.ol`
     }
 `;
 
-export const ListElement = styled.li`
-    padding-left: 16px;
-    margin-left: -24px;
+export const Element = styled.div`
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    align-items: center;
+    grid-gap: 16px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+        grid-gap: 8px;
+    }
 `;
