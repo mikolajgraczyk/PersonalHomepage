@@ -55,6 +55,7 @@ export const List = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px;
+    grid-column-gap: 115px;
     margin-top: 32px;
     color: ${({ theme }) => theme.color.slateGray};
     font-size: 18px;
@@ -84,6 +85,7 @@ export const Element = styled.div`
     justify-content: left;
     align-items: center;
     grid-gap: 16px;
+    width: 315px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
         grid-gap: 8px;
