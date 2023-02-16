@@ -83,7 +83,6 @@ export const RepoAndDemo = styled.div`
     grid-gap: 8px;
     transition: 0.5s;
     height: 100px;
-    max-width: 400px;
 
     ${({ darkModeEnabled }) => darkModeEnabled && css`
         color: ${({ theme }) => theme.color.white};
@@ -101,6 +100,8 @@ export const URL = styled.a`
     text-decoration: none;
     transition: 0.5s;
     max-width: 200px;
+    word-break: break-word;
+    
 
     &:hover{
         border-bottom: 1px solid ${({ theme }) => theme.color.scienceBlueOpacity80};
