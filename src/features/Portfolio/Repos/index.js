@@ -1,4 +1,11 @@
-import { Wrapper, Repo, RepoName, RepoDescription, RepoAndDemo, URL } from "./styled";
+import {
+  Wrapper,
+  Repo,
+  RepoName,
+  RepoDescription,
+  RepoAndDemo,
+  URL,
+} from "./styled";
 import { useSelector } from "react-redux";
 import { selectRepos } from "../portfolioSlice";
 import { useDarkTheme } from "../../../useDarkTheme";
@@ -9,10 +16,42 @@ const Repos = () => {
 
   return (
     <Wrapper>
-      {repos.map(repo =>
+      <Repo darkModeEnabled={theme}>
+        <RepoName darkModeEnabled={theme}>movies-browser</RepoName>
+        <RepoDescription darkModeEnabled={theme}>
+          Development in progress...
+        </RepoDescription>
+        <RepoAndDemo darkModeEnabled={theme}>
+            Demo:
+            <span>
+              <URL
+                href="https://marcin10lw.github.io/movies-browser/#/movies"
+                target="_blank"
+                rel="noreferrer"
+                darkModeEnabled={theme}
+              >
+                https://marcin10lw.github.io/movies-browser/#/movies
+              </URL>
+            </span>
+            Code:
+            <span>
+              <URL
+                href="https://github.com/marcin10lw/movies-browser"
+                target="_blank"
+                rel="noreferrer"
+                darkModeEnabled={theme}
+              >
+                https://github.com/marcin10lw/movies-browser
+              </URL>
+            </span>
+          </RepoAndDemo>
+        </Repo>
+      {repos.map((repo) => (
         <Repo key={repo.id} darkModeEnabled={theme}>
           <RepoName darkModeEnabled={theme}>{repo.name}</RepoName>
-          <RepoDescription darkModeEnabled={theme}>{repo.description}</RepoDescription>
+          <RepoDescription darkModeEnabled={theme}>
+            {repo.description}
+          </RepoDescription>
           <RepoAndDemo darkModeEnabled={theme}>
             Demo:
             <span>
@@ -27,7 +66,7 @@ const Repos = () => {
             </span>
             Code:
             <span>
-               <URL
+              <URL
                 href={repo.svn_url}
                 target="_blank"
                 rel="noreferrer"
@@ -37,9 +76,9 @@ const Repos = () => {
               </URL>
             </span>
           </RepoAndDemo>
-        </Repo>)
-      }
-    </Wrapper >
+        </Repo>
+      ))}
+    </Wrapper>
   );
 };
 
