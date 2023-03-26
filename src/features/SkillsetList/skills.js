@@ -1,7 +1,18 @@
 import { ListElement } from "./styled"
 
 export const currentSkillset = [
+    { skill: "React" },
+    { skill: "Redux (Toolkit)" },
+    { skill: "Redux Saga" },
+    { skill: "Working with API (fetch, axios)" },
     { skill: "Semantic & accessible HTML" },
+    { skill: "React Hooks" },
+    { skill: "Error Handling" },
+    { skill: "GitHub Pull Requests & Review" },
+    { skill: "JavaSrcipt: ES6+" },
+    { skill: "Scrum" },
+    { skill: "NPM" },
+    { skill: "Git" },
     { skill: "Responsive Web Design" },
     { skill: "Teamwork" },
     { skill: "Markdown" },
@@ -10,18 +21,7 @@ export const currentSkillset = [
     { skill: "CSS BEM convention" },
     { skill: "CSS Grid" },
     { skill: "CSS Flexbox" },
-    { skill: "Redux (Toolkit)" },
-    { skill: "Redux Saga" },
-    { skill: "React Hooks" },
-    { skill: "Error Handling" },
-    { skill: "Working with API (fetch, axios)" },
-    { skill: "JavaSrcipt: ES6+" },
-    { skill: "GitHub Pull Requests & Review" },
     { skill: "Trello" },
-    { skill: "Scrum" },
-    { skill: "NPM" },
-    { skill: "React" },
-    { skill: "Git" },
 ];
 
 export const wantToLearn = [
