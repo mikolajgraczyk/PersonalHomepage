@@ -12,6 +12,7 @@ export const currentSkillset = [
     { skill: "JavaSrcipt: ES6+" },
     { skill: "Scrum" },
     { skill: "NPM" },
+    { skill: "React Query (TanStack)"},
     { skill: "Git" },
     { skill: "Responsive Web Design" },
     { skill: "Teamwork" },
