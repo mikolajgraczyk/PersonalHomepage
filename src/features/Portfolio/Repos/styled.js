@@ -19,6 +19,10 @@ export const Repo = styled.div`
     border-radius: 4px;
     border: 6px solid ${({ theme }) => theme.color.ironOpacity30};
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
 
     &:hover{
         border: 6px solid ${({ theme }) => theme.color.scienceBlueOpacity20};
@@ -73,7 +77,7 @@ export const RepoDescription = styled.div`
 `;
 
 export const RepoAndDemo = styled.div`
-    margin-top: 24px;
+    
     font-size: 18px;
     color: ${({ theme }) => theme.color.slateGray};
     letter-spacing: 0.05em;

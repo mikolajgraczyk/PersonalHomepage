@@ -18,10 +18,12 @@ const Repos = () => {
     <Wrapper>
       {repos.map((repo) => (
         <Repo key={repo.id} darkModeEnabled={theme}>
-          <RepoName darkModeEnabled={theme}>{repo.name}</RepoName>
-          <RepoDescription darkModeEnabled={theme}>
-            {repo.description}
-          </RepoDescription>
+          <div>
+            <RepoName darkModeEnabled={theme}>{repo.name}</RepoName>
+            <RepoDescription darkModeEnabled={theme}>
+              {repo.description}
+            </RepoDescription>
+          </div>
           <RepoAndDemo darkModeEnabled={theme}>
             Demo:
             <span>
