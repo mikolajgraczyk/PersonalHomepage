@@ -3,8 +3,8 @@
 ## Description
 This webpage was created to inform about my programming skillset, things I want to learn in future. It also contains contact information.
 
-## Demo
-https://mikolajgraczyk.github.io/PersonalHomepage/
+## [Demo](https://mikolajgraczyk.github.io/PersonalHomepage/)
+
 ![example](./src/demo.gif)
 
 ## Technologies used in project
